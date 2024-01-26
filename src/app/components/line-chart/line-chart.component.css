@@ -1,0 +1,10 @@
+.charts-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.charts-wrapper {
+  margin: 1em;
+  width: 80%;
+}/*# sourceMappingURL=line-chart.component.css.map */

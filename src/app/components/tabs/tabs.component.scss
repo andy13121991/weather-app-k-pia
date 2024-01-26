@@ -1,0 +1,15 @@
+@import 'animate.css';
+
+.mat-mdc-tab-header {
+  background: rgba(94, 171, 196, 0.562);
+  animation: zoomInDown 1s !important;
+  -webkit-animation: zoomInDown 1s !important;
+}
+
+.mdc-tab__text-label {
+  color: black !important;
+}
+
+.subnav .mat-mdc-tab-header {
+  background: none !important;
+}

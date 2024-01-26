@@ -1,0 +1,56 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background: linear-gradient(45deg, rgba(248, 87, 168, 0.8235294118), rgba(255, 88, 88, 0.7882352941));
+  width: 80%;
+  margin: 1em;
+}
+
+.card-title {
+  margin: 1em;
+  text-align: center;
+  color: white;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-counted-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: bounceInUp 1s ease;
+  -webkit-animation: bounceInUp 1s ease;
+}
+
+.card-counted {
+  background: linear-gradient(45deg, #f857a8, #ff5858);
+  width: 80%;
+  height: 5vw;
+  margin: 1em;
+}
+
+.card-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.card-counted-text {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .card-counted {
+    height: 20vw !important;
+  }
+}/*# sourceMappingURL=heat-index-calculator.component.css.map */

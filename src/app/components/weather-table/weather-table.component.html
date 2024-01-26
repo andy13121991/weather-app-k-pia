@@ -1,0 +1,35 @@
+<!-- I created table from div instead of table because better for styling such as border-radius and etc. -->
+<!-- Container for the table layout -->
+<div class="table-layout">
+
+  <!-- Wrapper for the table -->
+  <div class="table-wrapper">
+
+    <!-- Table element -->
+    <div class="table">
+
+    <!-- Header row of the table -->
+    <div class="row header">
+      <div class="cell header-cell">Date</div>
+      <div class="cell header-cell">Time</div>
+      <div class="cell header-cell">Weather condition</div>
+      <div class="cell header-cell">Temperature</div>
+      <div class="cell header-cell">Surface Pressure</div>
+      <div class="cell header-cell">Relative Humidity</div>
+    </div>
+
+    <!-- Loop through each item in the data array to create table rows -->
+    <div *ngFor="let item of data?.time; let i = index" class="row table-row">
+
+      <!-- Cells for each column in the row -->
+      <div class="cell">{{ formatDateTime(item).date }}</div>
+      <div class="cell">{{ formatDateTime(item).time }}</div>
+      <div class="cell">{{ mapWeatherCondition(data?.weatherCode[i]) }}</div>
+      <div class="cell">{{ formatTemperature(data?.temperature2m[i]) }}</div>
+      <div class="cell">{{ formatSurfacePressure(data?.surfacePressure[i]) }}</div>
+      <div class="cell">{{ data?.relativeHumidity2m[i] }} %</div>
+    </div>
+  </div>
+</div>
+
+</div>

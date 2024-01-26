@@ -1,0 +1,12 @@
+<!-- Navigation bar for sub-tabs -->
+<nav class="subnav">
+  <mat-tab-group class="tabs" [color]="'warn'">
+
+    <!-- Loop through each dataset to create a tab -->
+    <mat-tab *ngFor="let dataset of data" [label]="dataset.label">
+
+      <!-- Include Weather Table component for the corresponding dataset -->
+      <app-weather-table [data]="dataset.data"></app-weather-table>
+    </mat-tab>
+  </mat-tab-group>
+</nav>

@@ -1,0 +1,44 @@
+<div class="card-wrapper">
+
+  <!-- Main card for Heat Index Calculator -->
+  <mat-card class="card">
+    <mat-card-title class="card-title">Calculator Heat Index</mat-card-title>
+    <mat-card-content class="card-form">
+
+      <!-- Dropdown to select Temperature Unit (Celsius or Fahrenheit) -->
+      <mat-form-field class="card-select">
+        <mat-label>Temperature Unit:</mat-label>
+        <mat-select [(ngModel)]="temperatureUnit">
+          <mat-option value="Celsius">Celsius</mat-option>
+          <mat-option value="Fahrenheit">Fahrenheit</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Input field for Air Temperature -->
+      <mat-form-field>
+        <mat-label for="airTemperature">Air Temperature ({{ temperatureUnit }}): </mat-label>
+        <input matInput type="number" id="airTemperature" [(ngModel)]="airTemperature" class="card-input">
+      </mat-form-field>
+
+      <!-- Input field for Relative Humidity -->
+      <mat-form-field>
+        <mat-label for="relativeHumidity">Relative Humidity (%): </mat-label>
+        <input matInput type="number" id="relativeHumidity" [(ngModel)]="relativeHumidity" class="card-input">
+      </mat-form-field>
+
+      <!-- Button to trigger the Heat Index calculation -->
+      <button mat-raised-button (click)="calculateHeatIndex()" class="card-btn">Submit</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- Display the Heat Index card only when heatIndex is defined -->
+<div class="card-counted-wrapper" *ngIf="heatIndex !== undefined">
+  <mat-card class="card-counted">
+    <mat-card-content class="card-text-wrapper">
+
+      <!-- Display the calculated Heat Index -->
+      <p class="card-counted-text">Heat Index: {{ heatIndex.toFixed(2) }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

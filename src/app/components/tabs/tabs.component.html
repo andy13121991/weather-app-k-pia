@@ -1,0 +1,27 @@
+<nav>
+
+  <!-- Material tab group for navigation tabs -->
+  <mat-tab-group class="tabs">
+
+    <!-- Tab for displaying tables -->
+    <mat-tab label="Tables">
+
+      <!-- Custom component for subtabs displaying tables -->
+      <app-subtabs [data]="combinedData" />
+    </mat-tab>
+
+    <!-- Tab for displaying a line chart -->
+    <mat-tab label="Line Chart">
+
+      <!-- Custom component for displaying a line chart -->
+      <app-line-chart />
+    </mat-tab>
+
+    <!-- Tab for the Heat Index Calculator -->
+    <mat-tab label="Heat Index Calculator">
+
+      <!-- Custom component for the Heat Index Calculator -->
+      <app-heat-index-calculator />
+    </mat-tab>
+  </mat-tab-group>
+</nav>
